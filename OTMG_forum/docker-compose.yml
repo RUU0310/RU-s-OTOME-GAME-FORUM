@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # 前端服务
+  otmg-frontend:
+    build: ./otmg-fontend
+    ports:
+      - "80:80"
+    depends_on:
+      - otmg-backend
+    restart: unless-stopped
+    networks:
+      - otmg-network
+
+  # 后端服务
+  otmg-backend:
+    build: ./otmg-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./otmg-backend/games.sqlite:/app/games.sqlite
+      - ./otmg-backend/uploads:/app/uploads
+      - ./otmg-backend/static:/app/static
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=5000
+    restart: unless-stopped
+    networks:
+      - otmg-network
+
+networks:
+  otmg-network:
+    driver: bridge
