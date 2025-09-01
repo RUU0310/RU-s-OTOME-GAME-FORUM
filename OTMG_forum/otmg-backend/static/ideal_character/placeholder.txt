@@ -1,0 +1,43 @@
+理想形象素材目录
+
+请在此目录下创建以下文件夹结构：
+
+ideal_character/
+├── hair/           # 发色图层
+│   ├── red.png     # 红色头发
+│   ├── blue.png    # 蓝色头发
+│   ├── yellow.png  # 黄色头发
+│   ├── brown.png   # 棕色头发
+│   ├── purple.png  # 紫色头发
+│   ├── white.png   # 白色头发
+│   ├── black.png   # 黑色头发
+│   └── green.png   # 绿色头发
+├── eyes/           # 瞳色图层
+│   ├── red.png     # 红色眼睛
+│   ├── blue.png    # 蓝色眼睛
+│   ├── yellow.png  # 黄色眼睛
+│   ├── brown.png   # 棕色眼睛
+│   ├── purple.png  # 紫色眼睛
+│   ├── black.png   # 黑色眼睛
+│   └── green.png   # 绿色眼睛
+├── glasses/        # 面部装饰图层
+│   ├── with.png    # 戴眼镜
+│   └── without.png # 无眼镜
+├── aura/           # 整体气质图层
+│   ├── sunny.png   # 阳光
+│   ├── gentle.png  # 温柔
+│   ├── cold.png    # 高冷
+│   ├── tsundere.png # 傲娇
+│   └── yandere.png # 病娇
+└── age/            # 年龄特征图层
+    ├── shota.png   # 正太
+    ├── adult.png   # 成男
+    └── uncle.png   # 大叔
+
+素材要求：
+1. 所有图片尺寸应保持一致（建议 400x400 像素，正方形）
+2. 背景透明（PNG格式）
+3. 图层对齐，便于合成
+4. 每个特征对应一个独立的图层文件
+
+注意：目前系统会检查素材是否存在，如果素材不存在，会跳过该图层继续合成其他可用图层。 
